@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新生児おむつの選び方完全ガイド - おむつガイド</title>
+    <meta name="description" content="新生児のおむつ選びで失敗しないために。サイズの選び方、1日の使用量、買いだめの注意点まで、先輩ママが教える実践的なガイドです。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .article {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .article-content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .article-content h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .article-content li {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .related-articles h3 {
+            color: #667eea;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .related-link {
+            display: block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: padding-left 0.2s;
+        }
+        
+        .related-link:hover {
+            padding-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .article {
+                padding: 25px;
+            }
+            
+            .article-content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👶 おむつガイド</a>
+            <ul class="nav-links">
+                <li><a href="index.html">診断ツール</a></li>
+                <li><a href="articles.html">記事一覧</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <span class="category">基本編</span>
+                <h1>新生児おむつの選び方完全ガイド</h1>
+                <div class="article-meta">公開日：2025年2月21日</div>
+            </div>
+
+            <div class="article-content">
+                <p>出産準備で必ず必要になる新生児用おむつ。でも、「どのメーカーを選べばいいの？」「何枚くらい用意すればいいの？」と悩むママパパは多いのではないでしょうか。</p>
+                
+                <p>この記事では、新生児のおむつ選びで失敗しないためのポイントを、実用的な情報とともに詳しく解説します。</p>
+
+                <h2>新生児用おむつのサイズと体重の目安</h2>
+                
+                <p>新生児用おむつは、一般的に体重5kgまでの赤ちゃんが対象です。メーカーによって多少の違いはありますが、以下が基本的な目安となります。</p>
+
+                <div class="highlight-box">
+                    <p><strong>新生児用おむつの対象</strong></p>
+                    <p>・体重：生まれてすぐ〜5kg</p>
+                    <p>・使用期間：生後0〜1ヶ月半頃</p>
+                    <p>・サイズ表記：「新生児用」「NB」など</p>
+                </div>
+
+                <p>ただし、赤ちゃんの成長スピードには個人差があります。生まれた時の体重が3,500gを超える大きめの赤ちゃんの場合、新生児用の期間が短くなることもあるので注意が必要です。</p>
+
+                <h2>1日の使用量はどれくらい？</h2>
+
+                <p>新生児期は授乳回数が多く、それに比例しておむつ替えの回数も多くなります。個人差はありますが、平均的な使用量は以下の通りです。</p>
+
+                <div class="highlight-box">
+                    <p><strong>新生児のおむつ使用量（1日あたり）</strong></p>
+                    <p>・生後0〜1週間：10〜15枚</p>
+                    <p>・生後2週間〜1ヶ月：8〜12枚</p>
+                    <p>・平均：約10枚/日</p>
+                </div>
+
+                <p>つまり、1パック（90枚入り）だと約9日分、1週間で約70枚消費する計算になります。新生児期は想像以上におむつを使うので、ある程度のストックは必要です。</p>
+
+                <h2>1パックはどれくらいでなくなる？</h2>
+
+                <p>新生児用おむつは、メーカーによって1パックの枚数が異なります。代表的なものは以下の通りです。</p>
+
+                <ul>
+                    <li>パンパース：90枚入り → 約9日分</li>
+                    <li>メリーズ：90枚入り → 約9日分</li>
+                    <li>ムーニー：111枚入り → 約11日分</li>
+                    <li>グーン：114枚入り → 約11日分</li>
+                </ul>
+
+                <p>1日10枚使うとして、1パックは1週間〜10日ほどで使い切る計算です。ただし、赤ちゃんによって使用量は変わるので、最初は様子を見ながら補充するのがおすすめです。</p>
+
+                <h2>買いだめのし過ぎに注意！</h2>
+
+                <p>「おむつは消耗品だから、まとめ買いしておこう」と考えるのは自然ですが、新生児期は特に注意が必要です。</p>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ 買いだめしすぎるとこんなリスクが</strong></p>
+                    <p>・赤ちゃんの成長が早く、すぐにサイズアウトする</p>
+                    <p>・新生児用は使用期間が1〜2ヶ月と短い</p>
+                    <p>・肌に合わず、別のメーカーに変えたくなることも</p>
+                    <p>・大量に余ると保管場所に困る</p>
+                </div>
+
+                <p>特に出生体重が3,000gを超える赤ちゃんの場合、新生児用の期間が予想より短いことがあります。最初は2〜3パック程度用意して、様子を見ながら買い足すのが賢い選択です。</p>
+
+                <h2>出産前に準備する枚数の目安</h2>
+
+                <p>出産前の準備としては、以下を目安にしましょう。</p>
+
+                <div class="highlight-box">
+                    <p><strong>出産前の準備枚数</strong></p>
+                    <p>・新生児用：2パック（180〜200枚）</p>
+                    <p>・使用期間：約2〜3週間分</p>
+                </div>
+
+                <p>これくらいあれば、退院後すぐに買い物に行けなくても安心です。残りは産後の赤ちゃんの様子を見ながら、オンラインショップなどで買い足すのがおすすめです。</p>
+
+                <h2>メーカー選びのコツ</h2>
+
+                <p>新生児用おむつは、メーカーによって肌触りや吸収力、フィット感が異なります。最初から大量に買わず、いくつかのメーカーを試してみるのがおすすめです。</p>
+
+                <p>多くのメーカーが「試供品」や「少量パック」を用意しているので、産院でもらったサンプルや、ドラッグストアの小さめパックで試してから、赤ちゃんに合ったものを選びましょう。</p>
+
+                <div class="cta-box">
+                    <h3>お子様に合ったおむつサイズを診断</h3>
+                    <p>体重を入力するだけで、最適なおむつサイズがわかります</p>
+                    <a href="index.html" class="cta-button">診断ツールを使う</a>
+                </div>
+
+                <h2>まとめ</h2>
+
+                <p>新生児用おむつは、1日10枚前後使い、1パックは約1週間〜10日でなくなります。出産前の準備は2パック程度にとどめ、赤ちゃんの成長に合わせて買い足していくのが失敗しないコツです。</p>
+
+                <p>特に新生児期はすぐにサイズアウトするので、買いだめのし過ぎには注意しましょう。赤ちゃんの肌に合ったメーカーを見つけて、快適なおむつライフを送ってくださいね。</p>
+            </div>
+
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <a href="articles.html" class="related-link">→ その他の記事を見る</a>
+                <a href="index.html" class="related-link">→ おむつサイズ診断ツール</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>© 2025 おむつガイド</p>
+        <p>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </p>
+    </footer>
+</body>
+</html>

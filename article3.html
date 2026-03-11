@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>夜のおむつ漏れ対策 - 年齢別の完全ガイド - おむつガイド</title>
+    <meta name="description" content="夜中のおむつ漏れに悩む新米パパママ必見。年齢別・授乳の有無別に、夜のおむつ漏れを防ぐ実践的な対策をご紹介します。">
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .article {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .article-content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .article-content h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .article-content li {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .related-articles h3 {
+            color: #667eea;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .related-link {
+            display: block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: padding-left 0.2s;
+        }
+        
+        .related-link:hover {
+            padding-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .article {
+                padding: 25px;
+            }
+            
+            .article-content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👶 おむつガイド</a>
+            <ul class="nav-links">
+                <li><a href="index.html">診断ツール</a></li>
+                <li><a href="articles.html">記事一覧</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <span class="category">実用編</span>
+                <h1>夜のおむつ漏れ対策 - 年齢別の完全ガイド</h1>
+                <div class="article-meta">公開日：2025年2月24日</div>
+            </div>
+
+            <div class="article-content">
+                <p>夜中におむつが漏れて、布団がびしょびしょ...。朝起きたら服が濡れている...。そんな経験はありませんか？夜のおむつ漏れは、赤ちゃんの睡眠を妨げるだけでなく、ママパパの睡眠不足の原因にもなります。</p>
+                
+                <p>この記事では、年齢別・授乳の有無別に、夜のおむつ漏れを防ぐための実践的な対策をご紹介します。</p>
+
+                <h2>夜間授乳がある時期（生後0〜6ヶ月頃）の対策</h2>
+                
+                <p>この時期は、授乳のたびにおむつをチェックするのが基本です。</p>
+
+                <div class="highlight-box">
+                    <p><strong>夜間授乳期の対策ポイント</strong></p>
+                    <p>・授乳のタイミングで必ずおむつ確認</p>
+                    <p>・パンパンになる前に交換</p>
+                    <p>・夜用おむつは必要ない場合が多い</p>
+                    <p>・こまめな交換が漏れ防止の鍵</p>
+                </div>
+
+                <p>夜間授乳があるうちは、2〜3時間おきに授乳するため、その都度おむつを替えることができます。そのため、通常の昼用おむつで十分なことが多いです。</p>
+
+                <h3>この時期のコツ</h3>
+
+                <ul>
+                    <li>授乳前におむつをチェック（パンパンなら先に交換）</li>
+                    <li>授乳後にもう一度確認（授乳中におしっこすることも）</li>
+                    <li>夜専用の替え用おむつを枕元に準備</li>
+                    <li>おしりふきウォーマーがあると赤ちゃんが起きにくい</li>
+                </ul>
+
+                <h2>卒乳後〜1歳頃の対策</h2>
+
+                <p>この時期から、夜のおむつ漏れが増えてきます。理由は、夜通し寝るようになり、1回のおむつで朝まで持たせる必要が出てくるからです。</p>
+
+                <div class="highlight-box">
+                    <p><strong>卒乳後の対策ポイント</strong></p>
+                    <p>・夜用おむつへの切り替えを検討</p>
+                    <p>・寝る前に必ず新しいおむつに交換</p>
+                    <p>・吸収力の高いおむつを選ぶ</p>
+                    <p>・1サイズ大きめも選択肢</p>
+                </div>
+
+                <h3>夜用おむつの選び方</h3>
+
+                <p>夜用おむつは、通常のおむつより吸収量が1.5〜2倍あります。特に以下のような場合は、夜用おむつへの切り替えを検討しましょう。</p>
+
+                <ul>
+                    <li>朝起きたらおむつがパンパンになっている</li>
+                    <li>週に1〜2回は漏れることがある</li>
+                    <li>おしっこの量が増えてきた</li>
+                    <li>夜通し寝るようになった（6時間以上）</li>
+                </ul>
+
+                <h2>1歳以降の夜間対策</h2>
+
+                <p>成長とともに、おしっこの量も増えます。1歳を過ぎたら、夜用おむつは必須と考えましょう。</p>
+
+                <div class="highlight-box">
+                    <p><strong>1歳以降の対策ポイント</strong></p>
+                    <p>・夜用おむつは必須</p>
+                    <p>・寝る直前の水分を控えめに</p>
+                    <p>・寝る前のトイレを習慣に（2歳以降）</p>
+                    <p>・朝まで漏れない工夫が重要</p>
+                </div>
+
+                <h3>生活習慣での対策</h3>
+
+                <ul>
+                    <li>夕食後〜就寝前の水分は控えめに（ただし脱水に注意）</li>
+                    <li>寝る直前におしっこをさせる（できる子は）</li>
+                    <li>おむつは寝る直前に新品に交換</li>
+                    <li>パジャマは吸水性の良い素材を選ぶ</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ 水分制限の注意</strong></p>
+                    <p>夜間の水分を控えすぎると脱水のリスクがあります。極端な制限はせず、寝る30分〜1時間前からは控えめにする程度にしましょう。日中はしっかり水分補給させてください。</p>
+                </div>
+
+                <h2>おすすめの夜用おむつ</h2>
+
+                <p>夜用おむつは各メーカーから販売されています。以下は人気の商品です。</p>
+
+                <h3>パンパース さらさらケア 夜用</h3>
+                <p>吸収力が高く、朝まで安心。サイズ展開も豊富です。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2591%25E3%2583%25B3%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25B9%2520%25E5%25A4%259C%25E7%2594%25A8%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <h3>メリーズ さらさらエアスルー 夜用</h3>
+                <p>通気性が良く、肌に優しい。敏感肌の赤ちゃんにおすすめ。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A1%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA%2520%25E5%25A4%259C%25E7%2594%25A8%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <h3>ムーニー 夜用オムツ</h3>
+                <p>コスパが良く、吸収力も十分。まとめ買いにおすすめ。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A0%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25BC%2520%25E5%25A4%259C%25E7%2594%25A8%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <div class="cta-box">
+                    <h3>お子様に合ったおむつサイズを診断</h3>
+                    <p>体重を入力するだけで、最適なおむつサイズがわかります</p>
+                    <a href="index.html" class="cta-button">診断ツールを使う</a>
+                </div>
+
+                <h2>それでも漏れる場合の対策</h2>
+
+                <p>夜用おむつを使っても漏れてしまう場合は、以下を試してみてください。</p>
+
+                <h3>1サイズ大きめにする</h3>
+                <p>吸収量を増やすため、夜だけ1サイズ大きめのおむつを使う方法です。ただし、サイズが大きすぎると逆に隙間から漏れるので注意。</p>
+
+                <h3>おむつの当て方を見直す</h3>
+                <ul>
+                    <li>ギャザーをしっかり立てる</li>
+                    <li>お腹側を少し高めに当てる</li>
+                    <li>足回りの隙間をなくす</li>
+                    <li>テープは左右対称にしっかり留める</li>
+                </ul>
+
+                <h3>防水シーツを活用</h3>
+                <p>万が一漏れても布団を汚さないよう、防水シーツを敷いておくと安心です。洗い替え用に2〜3枚あると便利。</p>
+
+                <h2>まとめ</h2>
+
+                <p>夜のおむつ漏れ対策は、年齢や授乳の有無によって変わります。</p>
+
+                <ul>
+                    <li>夜間授乳期：こまめな交換で十分</li>
+                    <li>卒乳後〜1歳：夜用おむつを検討</li>
+                    <li>1歳以降：夜用おむつは必須</li>
+                </ul>
+
+                <p>赤ちゃんの成長に合わせて、適切な対策を取りましょう。快適な夜を過ごせるよう、いろいろ試してみてくださいね。</p>
+            </div>
+
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <a href="article1.html" class="related-link">→ 新生児おむつの選び方完全ガイド</a>
+                <a href="article2.html" class="related-link">→ テープ式とパンツ式の違いと切り替え時期</a>
+                <a href="articles.html" class="related-link">→ その他の記事を見る</a>
+                <a href="index.html" class="related-link">→ おむつサイズ診断ツール</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>© 2025 おむつガイド</p>
+        <p>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </p>
+    </footer>
+</body>
+</html>

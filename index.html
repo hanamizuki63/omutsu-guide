@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="3bj7YpjAC_yF8bCelLxJX-Si2H9nSSfLXooFidvXoG8" />
+    <title>おむつガイド - 新米パパママのおむつ情報サイト</title>
+    <meta name="description" content="体重・身長を入力するだけで、お子様に最適なおむつサイズがわかります。パンパース、メリーズ、ムーニー、グーン全メーカー対応。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        /* ヘッダー */
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* メインコンテンツ */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* 広告バナー */
+        .ad-banner {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .ad-banner p {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* カード */
+        .card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        /* 入力フォーム */
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        label {
+            display: block;
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        .unit {
+            color: #999;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        /* 診断結果 */
+        .results {
+            display: none;
+            margin-top: 30px;
+        }
+        
+        .result-card {
+            background: #f8f9ff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        
+        .size-info {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .product-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .affiliate-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+        
+        .affiliate-btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .amazon-btn {
+            background: #ff9900;
+            color: white;
+        }
+        
+        .rakuten-btn {
+            background: #bf0000;
+            color: white;
+        }
+        
+        /* 履歴 */
+        .history {
+            margin-top: 30px;
+        }
+        
+        .history h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 22px;
+        }
+        
+        .history-item {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        .history-date {
+            color: #999;
+            font-size: 12px;
+        }
+        
+        .clear-btn {
+            background: #e0e0e0;
+            color: #666;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        
+        .note {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #856404;
+        }
+        
+        /* 記事セクション */
+        .articles-section {
+            margin-top: 30px;
+        }
+        
+        .articles-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .article-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .article-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .view-all {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .view-all a {
+            display: inline-block;
+            padding: 12px 30px;
+            background: white;
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .view-all a:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* フッター */
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        /* レスポンシブ */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+            
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👶 おむつガイド</a>
+            <ul class="nav-links">
+                <li><a href="index.html">診断ツール</a></li>
+                <li><a href="articles.html">記事一覧</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- 広告枠（上部） -->
+        <div class="ad-banner">
+            <p>【広告枠】Google AdSenseコードをここに設置</p>
+        </div>
+        
+        <!-- 診断ツール -->
+        <div class="card">
+            <h1>👶 おむつサイズ診断</h1>
+            <p class="subtitle">お子様にピッタリのおむつが見つかります</p>
+            
+            <div class="input-group">
+                <label>体重 <span class="unit">(kg)</span></label>
+                <input type="number" id="weight" placeholder="例: 7.5" step="0.1" min="0">
+            </div>
+            
+            <div class="input-group">
+                <label>身長 <span class="unit">(cm・任意)</span></label>
+                <input type="number" id="height" placeholder="例: 70" step="0.5" min="0">
+            </div>
+            
+            <button onclick="diagnose()">診断する</button>
+            
+            <div id="results" class="results"></div>
+            
+            <div class="note">
+                💡 メーカーによってサイズ感が異なります。複数試してピッタリを見つけましょう！
+            </div>
+        </div>
+        
+        <!-- 履歴 -->
+        <div class="card history">
+            <h2>📝 診断履歴</h2>
+            <div id="history"></div>
+            <button class="clear-btn" onclick="clearHistory()">履歴をクリア</button>
+        </div>
+        
+        <!-- 記事セクション -->
+        <div class="card articles-section">
+            <h2>📚 おむつ選びのお役立ち記事</h2>
+            <div class="article-grid">
+                <!-- 記事は後で追加 -->
+                <div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #999;">
+                    <p>記事を準備中です。もうしばらくお待ちください。</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 広告枠（下部） -->
+        <div class="ad-banner">
+            <p>【広告枠】Google AdSenseコードをここに設置</p>
+        </div>
+    </div>
+    
+    <!-- フッター -->
+    <footer>
+        <p>© 2025 おむつガイド</p>
+        <p>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </p>
+        <p style="margin-top: 10px; font-size: 12px;">
+            ※ サイズは目安です。お子様の体型により異なる場合があります
+        </p>
+    </footer>
+
+    <script>
+        // おむつデータベース
+        const diaperData = {
+            'パンパース': [
+                { size: '新生児', weight: [0, 5], keywords: 'パンパース 新生児' },
+                { size: 'Sサイズ', weight: [4, 8], keywords: 'パンパース Sサイズ' },
+                { size: 'Mサイズ', weight: [6, 11], keywords: 'パンパース Mサイズ' },
+                { size: 'Lサイズ', weight: [9, 14], keywords: 'パンパース Lサイズ' },
+                { size: 'ビッグサイズ', weight: [12, 22], keywords: 'パンパース ビッグ' },
+                { size: 'ビッグより大きいサイズ', weight: [15, 35], keywords: 'パンパース ビッグより大きい' }
+            ],
+            'メリーズ': [
+                { size: '新生児', weight: [0, 5], keywords: 'メリーズ 新生児' },
+                { size: 'Sサイズ', weight: [4, 8], keywords: 'メリーズ Sサイズ' },
+                { size: 'Mサイズ', weight: [6, 11], keywords: 'メリーズ Mサイズ' },
+                { size: 'Lサイズ', weight: [9, 14], keywords: 'メリーズ Lサイズ' },
+                { size: 'ビッグサイズ', weight: [12, 22], keywords: 'メリーズ ビッグ' },
+                { size: 'ビッグより大きいサイズ', weight: [15, 28], keywords: 'メリーズ ビッグより大きい' }
+            ],
+            'ムーニー': [
+                { size: '新生児', weight: [0, 5], keywords: 'ムーニー 新生児' },
+                { size: 'Sサイズ', weight: [4, 8], keywords: 'ムーニー Sサイズ' },
+                { size: 'Mサイズ', weight: [6, 11], keywords: 'ムーニー Mサイズ' },
+                { size: 'Lサイズ', weight: [9, 14], keywords: 'ムーニー Lサイズ' },
+                { size: 'ビッグサイズ', weight: [12, 22], keywords: 'ムーニー ビッグ' },
+                { size: 'ビッグより大きいサイズ', weight: [13, 28], keywords: 'ムーニー ビッグより大きい' }
+            ],
+            'グーン': [
+                { size: '新生児', weight: [0, 5], keywords: 'グーン 新生児' },
+                { size: 'Sサイズ', weight: [4, 8], keywords: 'グーン Sサイズ' },
+                { size: 'Mサイズ', weight: [6, 12], keywords: 'グーン Mサイズ' },
+                { size: 'Lサイズ', weight: [9, 14], keywords: 'グーン Lサイズ' },
+                { size: 'ビッグサイズ', weight: [12, 20], keywords: 'グーン ビッグ' },
+                { size: 'ビッグより大きいサイズ', weight: [15, 35], keywords: 'グーン ビッグより大きい' }
+            ]
+        };
+
+        function diagnose() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const height = parseFloat(document.getElementById('height').value) || null;
+            
+            if (!weight || weight <= 0) {
+                alert('体重を入力してください');
+                return;
+            }
+            
+            const results = [];
+            
+            for (const [brand, sizes] of Object.entries(diaperData)) {
+                for (const size of sizes) {
+                    if (weight >= size.weight[0] && weight <= size.weight[1]) {
+                        results.push({
+                            brand: brand,
+                            size: size.size,
+                            weightRange: `${size.weight[0]}〜${size.weight[1]}kg`,
+                            keywords: size.keywords
+                        });
+                    }
+                }
+            }
+            
+            displayResults(results);
+            saveToHistory(weight, height, results.length);
+        }
+
+        function displayResults(results) {
+            const resultsDiv = document.getElementById('results');
+            
+            if (results.length === 0) {
+                resultsDiv.innerHTML = '<p style="color: #999; text-align: center;">該当するサイズが見つかりませんでした</p>';
+                resultsDiv.style.display = 'block';
+                return;
+            }
+            
+            let html = '<h2 style="color: #667eea; margin-bottom: 20px;">診断結果 ✨</h2>';
+            
+            results.forEach(result => {
+                const amazonUrl = `https://www.amazon.co.jp/s?k=${encodeURIComponent(result.keywords)}&tag=YOUR_AMAZON_ID`;
+                const rakutenUrl = `https://hb.afl.rakuten.co.jp/hgc/512f2bf6.526fe90e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F${encodeURIComponent(result.keywords)}%2F`;
+                
+                html += `
+                    <div class="result-card">
+                        <h3>${result.brand}</h3>
+                        <div class="size-info">
+                            <strong>${result.size}</strong> (対象体重: ${result.weightRange})
+                        </div>
+                        <div class="product-links">
+                            <a href="${amazonUrl}" target="_blank" class="affiliate-btn amazon-btn">
+                                Amazonで見る
+                            </a>
+                            <a href="${rakutenUrl}" target="_blank" class="affiliate-btn rakuten-btn">
+                                楽天で見る
+                            </a>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            resultsDiv.innerHTML = html;
+            resultsDiv.style.display = 'block';
+        }
+
+        function saveToHistory(weight, height, resultCount) {
+            const history = JSON.parse(localStorage.getItem('diaperHistory') || '[]');
+            const now = new Date();
+            
+            history.unshift({
+                date: now.toLocaleString('ja-JP'),
+                weight: weight,
+                height: height,
+                resultCount: resultCount
+            });
+            
+            if (history.length > 10) {
+                history.pop();
+            }
+            
+            localStorage.setItem('diaperHistory', JSON.stringify(history));
+            displayHistory();
+        }
+
+        function displayHistory() {
+            const history = JSON.parse(localStorage.getItem('diaperHistory') || '[]');
+            const historyDiv = document.getElementById('history');
+            
+            if (history.length === 0) {
+                historyDiv.innerHTML = '<p style="color: #999; font-size: 14px;">まだ診断履歴がありません</p>';
+                return;
+            }
+            
+            let html = '';
+            history.forEach(item => {
+                html += `
+                    <div class="history-item">
+                        <div>${item.weight}kg${item.height ? ` / ${item.height}cm` : ''} → ${item.resultCount}件の候補</div>
+                        <div class="history-date">${item.date}</div>
+                    </div>
+                `;
+            });
+            
+            historyDiv.innerHTML = html;
+        }
+
+        function clearHistory() {
+            if (confirm('履歴をすべて削除しますか？')) {
+                localStorage.removeItem('diaperHistory');
+                displayHistory();
+            }
+        }
+
+        displayHistory();
+    </script>
+</body>
+</html>

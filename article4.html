@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>おむつのうんち漏れ対策 - 横漏れ・背中漏れを防ぐコツ - おむつガイド</title>
+    <meta name="description" content="おむつからうんちが漏れて困っている新米パパママ必見。ゆるうんち対策、横漏れ防止機能があるおむつ、正しいサイズの選び方まで徹底解説します。">
+<style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .article {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .article-content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .article-content h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .article-content li {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .related-articles h3 {
+            color: #667eea;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .related-link {
+            display: block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: padding-left 0.2s;
+        }
+        
+        .related-link:hover {
+            padding-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .article {
+                padding: 25px;
+            }
+            
+            .article-content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👶 おむつガイド</a>
+            <ul class="nav-links">
+                <li><a href="index.html">診断ツール</a></li>
+                <li><a href="articles.html">記事一覧</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <span class="category">実用編</span>
+                <h1>おむつのうんち漏れ対策 - 横漏れ・背中漏れを防ぐコツ</h1>
+                <div class="article-meta">公開日：2025年2月24日</div>
+            </div>
+
+            <div class="article-content">
+                <p>おむつを替えようとしたら、うんちが背中まで漏れていた...。服もシーツも汚れて、洗濯が大変...。そんな経験、ありませんか？</p>
+                
+                <p>特に新生児期のゆるゆるうんちは漏れやすく、多くのパパママが悩んでいます。この記事では、うんち漏れを防ぐための実践的な対策をご紹介します。</p>
+
+                <h2>うんち漏れが起きる3つの原因</h2>
+                
+                <p>まず、なぜうんちが漏れるのか、原因を理解しましょう。</p>
+
+                <h3>1. サイズが合っていない</h3>
+                <p>最も多い原因がこれ。大きすぎても小さすぎても漏れます。</p>
+
+                <div class="warning-box">
+                    <p><strong>⚠️ サイズ選びの落とし穴</strong></p>
+                    <p>・大きすぎる → 隙間ができて漏れる</p>
+                    <p>・小さすぎる → 圧迫されて漏れる</p>
+                    <p>→ <strong>ジャストサイズが鉄則！</strong></p>
+                </div>
+
+                <p>夜のおしっこ漏れ対策では「1サイズ大きめ」も選択肢ですが、うんち漏れに関しては<strong>ジャストサイズが最重要</strong>です。</p>
+
+                <h3>2. ギャザーが立っていない</h3>
+                <p>おむつのギャザー（立体的なひだ）が寝たままだと、隙間ができて漏れやすくなります。</p>
+
+                <h3>3. ゆるゆるうんち（新生児期）</h3>
+                <p>新生児〜生後3ヶ月頃は、母乳やミルクの影響でうんちが水っぽく、漏れやすい時期です。</p>
+
+                <h2>うんち漏れを防ぐ5つの対策</h2>
+
+                <h3>対策1：ジャストサイズを選ぶ</h3>
+
+                <p>体重に合ったサイズを選びましょう。以下のサインが出たら、サイズアップのタイミングです。</p>
+
+                <ul>
+                    <li>太ももに跡がつく</li>
+                    <li>おへそが隠れない</li>
+                    <li>テープが真ん中より外側で留まる</li>
+                    <li>頻繁に漏れるようになった</li>
+                </ul>
+
+                <div class="cta-box">
+                    <h3>お子様に合ったおむつサイズを診断</h3>
+                    <p>体重を入力するだけで、最適なおむつサイズがわかります</p>
+                    <a href="index.html" class="cta-button">診断ツールを使う</a>
+                </div>
+
+                <h3>対策2：ギャザーをしっかり立てる</h3>
+
+                <p>おむつを当てる時に、必ずギャザーを立てましょう。これだけで漏れがグッと減ります。</p>
+
+                <div class="highlight-box">
+                    <p><strong>ギャザーの立て方</strong></p>
+                    <p>1. おむつを広げる</p>
+                    <p>2. 足回りのギャザーを指でつまんで立てる</p>
+                    <p>3. 背中側のギャザーも忘れずに</p>
+                    <p>4. おむつを当てた後、もう一度確認</p>
+                </div>
+
+                <p>特に背中側のギャザーは見落としがち。仰向けに寝かせた時に、背中のギャザーがしっかり立っているか確認してください。</p>
+
+                <h3>対策3：横漏れ防止機能があるおむつを選ぶ</h3>
+
+                <p>最近のおむつは、横漏れ・背中漏れ対策が強化されているものがあります。特にゆるうんちの時期は、こういったおむつがおすすめです。</p>
+
+                <h4>おすすめのおむつ</h4>
+
+                <p><strong>パンパース さらさらケア</strong></p>
+                <p>立体ギャザーが優秀で、横漏れに強い。新生児期から人気。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2591%25E3%2583%25B3%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25B9%2520%25E6%2596%25B0%25E7%2594%259F%25E5%2585%2590%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <p><strong>メリーズ さらさらエアスルー</strong></p>
+                <p>通気性が良く、ギャザーが柔らかい。肌に優しく漏れにくい。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A1%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA%2520%25E6%2596%25B0%25E7%2594%259F%25E5%2585%2590%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <p><strong>ムーニー エアフィット</strong></p>
+                <p>背中のギャザーが高めで、背中漏れ対策に優れている。</p>
+                <p><a href="https://hb.afl.rakuten.co.jp/hgc/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A0%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25BC%2520%25E6%2596%25B0%25E7%2594%259F%25E5%2585%2590%2F" target="_blank" rel="nofollow" style="color: #667eea; font-weight: 600;">→ 楽天で見る</a></p>
+
+                <h3>対策4：おむつの当て方を見直す</h3>
+
+                <p>正しい当て方をマスターすれば、漏れは劇的に減ります。</p>
+
+                <div class="highlight-box">
+                    <p><strong>正しいおむつの当て方</strong></p>
+                    <p>1. おむつの中心を赤ちゃんの背中の真ん中に合わせる</p>
+                    <p>2. 背中側を少し高めに当てる（ウエストライン付近）</p>
+                    <p>3. お腹側を引き上げる</p>
+                    <p>4. テープは左右対称に、斜め下向きに留める</p>
+                    <p>5. ギャザーを最終確認</p>
+                </div>
+
+                <p><strong>特に重要：背中側を高めに</strong></p>
+                <p>背中漏れの多くは、背中側のおむつが低すぎることが原因です。ウエストライン（腰骨あたり）まで来るように、少し高めに当てましょう。</p>
+
+                <h3>対策5：うんちしたらすぐ交換</h3>
+
+                <p>うんちは時間が経つとおむつの中で広がり、漏れやすくなります。においや様子で気づいたら、すぐに交換しましょう。</p>
+
+                <h2>新生児期のゆるうんち対策</h2>
+
+                <p>新生児〜生後3ヶ月頃は、うんちが水っぽく特に漏れやすい時期です。</p>
+
+                <h3>この時期の特徴</h3>
+                <ul>
+                    <li>1日に5〜10回うんちすることも</li>
+                    <li>水っぽくて漏れやすい</li>
+                    <li>背中漏れが多い</li>
+                    <li>授乳のたびにうんちすることも</li>
+                </ul>
+
+                <h3>ゆるうんち期の対策</h3>
+
+                <div class="highlight-box">
+                    <p><strong>ゆるうんち対策のポイント</strong></p>
+                    <p>・新生児用の小さめサイズをジャストサイズで</p>
+                    <p>・ギャザーは特に念入りに立てる</p>
+                    <p>・背中側を高めに当てる</p>
+                    <p>・こまめに確認して早めに交換</p>
+                </div>
+
+                <p>この時期は「漏れるのが普通」くらいに考えて、着替えを多めに用意しておくと気持ちが楽です。生後4ヶ月頃からうんちが固まってくるので、それまでの辛抱です。</p>
+
+                <h2>それでも漏れる場合</h2>
+
+                <p>対策をしても漏れる場合は、以下を試してみてください。</p>
+
+                <h3>メーカーを変えてみる</h3>
+                <p>おむつのメーカーによって、形やギャザーの位置が違います。今使っているおむつで漏れるなら、別のメーカーを試してみましょう。</p>
+
+                <h3>体型に合ったおむつを探す</h3>
+                <ul>
+                    <li>細身の赤ちゃん → パンパース、メリーズ</li>
+                    <li>ぽっちゃり赤ちゃん → ムーニー、グーン</li>
+                    <li>足が太め → ギャザーが柔らかいメリーズ</li>
+                </ul>
+
+                <p>赤ちゃんの体型は様々なので、何種類か試して相性の良いものを見つけることが大切です。</p>
+
+                <h2>まとめ</h2>
+
+                <p>うんち漏れを防ぐポイントは以下の5つです。</p>
+
+                <ul>
+                    <li>ジャストサイズを選ぶ（大きすぎず小さすぎず）</li>
+                    <li>ギャザーをしっかり立てる（特に背中側）</li>
+                    <li>横漏れ防止機能があるおむつを選ぶ</li>
+                    <li>背中側を高めに当てる</li>
+                    <li>うんちしたらすぐ交換</li>
+                </ul>
+
+                <p>特に新生児期は漏れやすい時期なので、「漏れて当たり前」くらいに気楽に構えましょう。生後4ヶ月を過ぎれば、うんちも固まって漏れにくくなります。</p>
+
+                <p>いろいろ試して、赤ちゃんに合ったおむつと当て方を見つけてくださいね。</p>
+            </div>
+
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <a href="article1.html" class="related-link">→ 新生児おむつの選び方完全ガイド</a>
+                <a href="article2.html" class="related-link">→ テープ式とパンツ式の違いと切り替え時期</a>
+                <a href="article3.html" class="related-link">→ 夜のおむつ漏れ対策</a>
+                <a href="articles.html" class="related-link">→ その他の記事を見る</a>
+                <a href="index.html" class="related-link">→ おむつサイズ診断ツール</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>© 2025 おむつガイド</p>
+        <p>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </p>
+    </footer>
+</body>
+</html>

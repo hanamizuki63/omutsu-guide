@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>テープ式とパンツ式の違いと切り替え時期 - おむつガイド</title>
+    <meta name="description" content="テープ式からパンツ式への切り替えタイミングは？寝返りが始まったら要注意。余ったテープ式の活用法も紹介します。">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .article {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .article-header {
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 15px;
+        }
+        
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .article-meta {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        
+        .article-content h2 {
+            color: #667eea;
+            font-size: 24px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .article-content h3 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content p {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+        
+        .article-content li {
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 12px;
+        }
+        
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .highlight-box p {
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .tip-box {
+            background: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .tip-box p {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .tip-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box p {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-box h3 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+        
+        .cta-box p {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 15px 40px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+        }
+        
+        .related-articles {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .related-articles h3 {
+            color: #667eea;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+        
+        .related-link {
+            display: block;
+            color: #667eea;
+            text-decoration: none;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            transition: padding-left 0.2s;
+        }
+        
+        .related-link:hover {
+            padding-left: 10px;
+        }
+        
+        footer {
+            text-align: center;
+            color: white;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 13px;
+            opacity: 0.9;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: underline;
+            margin: 0 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+                font-size: 12px;
+            }
+            
+            h1 {
+                font-size: 26px;
+            }
+            
+            .article {
+                padding: 25px;
+            }
+            
+            .article-content h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">👶 おむつガイド</a>
+            <ul class="nav-links">
+                <li><a href="index.html">診断ツール</a></li>
+                <li><a href="articles.html">記事一覧</a></li>
+                <li><a href="privacy.html">プライバシー</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <article class="article">
+            <div class="article-header">
+                <span class="category">基本編</span>
+                <h1>テープ式とパンツ式の違いと切り替え時期</h1>
+                <div class="article-meta">公開日：2025年2月21日</div>
+            </div>
+
+            <div class="article-content">
+                <p>赤ちゃんが成長すると、おむつをテープ式からパンツ式に切り替えるタイミングがやってきます。でも、「いつ切り替えればいいの？」「テープ式が余ったらどうする？」と悩むママパパも多いはず。</p>
+                
+                <p>この記事では、テープ式とパンツ式の違いから、切り替えの最適なタイミング、余ったテープ式の活用法まで詳しく解説します。</p>
+
+                <h2>テープ式とパンツ式の違い</h2>
+                
+                <p>まずは、それぞれの特徴を理解しましょう。</p>
+
+                <h3>テープ式の特徴</h3>
+                
+                <ul>
+                    <li>赤ちゃんを寝かせたまま交換できる</li>
+                    <li>テープでサイズ調整がしやすい</li>
+                    <li>新生児〜寝返り前の赤ちゃんに最適</li>
+                    <li>うんちの処理がしやすい</li>
+                    <li>パンツ式より価格が安めなことが多い</li>
+                </ul>
+
+                <h3>パンツ式の特徴</h3>
+                
+                <ul>
+                    <li>立ったまま・動きながら交換できる</li>
+                    <li>よく動く赤ちゃんでもずれにくい</li>
+                    <li>はかせるだけで簡単</li>
+                    <li>赤ちゃんが嫌がりにくい</li>
+                    <li>外出先での交換が楽</li>
+                </ul>
+
+                <h2>切り替えのベストタイミングは「寝返り」</h2>
+
+                <p>パンツ式への切り替えで最も推奨されるタイミングは、赤ちゃんが寝返りを始めた頃です。</p>
+
+                <div class="highlight-box">
+                    <p><strong>寝返りが始まったらパンツ式を検討</strong></p>
+                    <p>・時期：生後5〜6ヶ月頃</p>
+                    <p>・サイズ：Mサイズ以降が多い</p>
+                    <p>・サイン：おむつ替え中にコロコロ転がる</p>
+                </div>
+
+                <p>寝返りが始まると、テープ式のおむつ替えが一気に大変になります。おむつを当てている途中で赤ちゃんがゴロンと寝返りを打ってしまい、何度もやり直す...なんてことも日常茶飯事です。</p>
+
+                <h2>こんなサインが出たら切り替え時</h2>
+
+                <p>以下のような状況になったら、パンツ式への切り替えを考えましょう。</p>
+
+                <ul>
+                    <li>おむつ替え中にじっとしていない</li>
+                    <li>寝返りやハイハイが始まった</li>
+                    <li>足をバタバタ動かしてテープが貼りにくい</li>
+                    <li>つかまり立ちや歩行を始めた</li>
+                    <li>おむつ替えを嫌がるようになった</li>
+                </ul>
+
+                <p>特に、おむつ替えの時間が親子ともにストレスになっているなら、パンツ式に切り替えることで一気に楽になることが多いです。</p>
+
+                <h2>段階的な切り替えもおすすめ</h2>
+
+                <p>「いきなり全部パンツ式にするのは不安...」という場合は、段階的に切り替える方法もあります。</p>
+
+                <div class="tip-box">
+                    <p><strong>💡 段階的切り替えの例</strong></p>
+                    <p>・日中はパンツ式、夜間はテープ式</p>
+                    <p>・外出時だけパンツ式</p>
+                    <p>・うんちの時はテープ式、おしっこだけの時はパンツ式</p>
+                </div>
+
+                <p>夜間は赤ちゃんが寝ているので、テープ式の方が交換しやすいという声も多いです。生活スタイルに合わせて、無理なく移行していきましょう。</p>
+
+                <h2>余ったテープ式の賢い活用法</h2>
+
+                <p>パンツ式に切り替えたものの、テープ式がまだ残っている...そんな時は捨てずに活用しましょう。</p>
+
+                <h3>おすすめの活用法</h3>
+
+                <div class="highlight-box">
+                    <p><strong>うんちの時に大活躍！</strong></p>
+                    <p>うんちの処理をする時は、赤ちゃんを寝かせてテープ式で交換する方が断然楽です。パンツ式だと脱がせる時にうんちが広がってしまうリスクもあります。</p>
+                    <p>余ったテープ式は「うんち専用おむつ」として最後まで使い切りましょう。</p>
+                </div>
+
+                <h3>その他の活用法</h3>
+
+                <ul>
+                    <li>夜間の交換用として使う</li>
+                    <li>お昼寝の時だけ使う</li>
+                    <li>体調が悪くて寝ている時に使う</li>
+                    <li>下の子が生まれた時のために保管</li>
+                </ul>
+
+                <p>特に下の子が生まれる予定があるなら、サイズが合えば保管しておくのも経済的です。</p>
+
+                <h2>両方を使い分けるママも多い</h2>
+
+                <p>実は、パンツ式に完全移行せず、両方を使い分けているママパパも少なくありません。</p>
+
+                <div class="tip-box">
+                    <p><strong>💡 使い分けのメリット</strong></p>
+                    <p>・状況に応じて最適な方を選べる</p>
+                    <p>・テープ式の方が経済的な場合も</p>
+                    <p>・うんちの処理が圧倒的に楽</p>
+                </div>
+
+                <p>「普段はパンツ式、うんちの時だけテープ式」という使い分けは、特に人気の方法です。</p>
+
+                <div class="cta-box">
+                    <h3>お子様に合ったおむつサイズを診断</h3>
+                    <p>体重を入力するだけで、最適なおむつサイズがわかります</p>
+                    <a href="index.html" class="cta-button">診断ツールを使う</a>
+                </div>
+
+                <h2>まとめ</h2>
+
+                <p>テープ式からパンツ式への切り替えは、寝返りが始まる生後5〜6ヶ月頃が目安です。ただし、赤ちゃんの発達や生活スタイルに合わせて、焦らず切り替えていくのがポイントです。</p>
+
+                <p>余ったテープ式は、うんちの時に寝転がって交換する際に大活躍します。捨てずに最後まで使い切りましょう。パンツ式とテープ式、それぞれの良さを活かして、ストレスフリーなおむつ替えを目指してくださいね。</p>
+            </div>
+
+            <div class="related-articles">
+                <h3>関連記事</h3>
+                <a href="article1.html" class="related-link">→ 新生児おむつの選び方完全ガイド</a>
+                <a href="articles.html" class="related-link">→ その他の記事を見る</a>
+                <a href="index.html" class="related-link">→ おむつサイズ診断ツール</a>
+            </div>
+        </article>
+    </div>
+
+    <footer>
+        <p>© 2025 おむつガイド</p>
+        <p>
+            <a href="privacy.html">プライバシーポリシー</a>
+            <a href="contact.html">お問い合わせ</a>
+        </p>
+    </footer>
+</body>
+</html>

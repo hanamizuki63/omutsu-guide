@@ -7,372 +7,147 @@
     <title>おむつのサイズアップのタイミング・サイン - おむつガイド</title>
     <meta name="description" content="おむつのサイズアップが必要なサインを見逃していませんか？テープ跡、漏れ、きつさなど、サイズが合わなくなったサインと正しい選び方を解説します。">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 20px;
-            font-weight: 700;
-            color: #667eea;
-            text-decoration: none;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 25px;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            color: #333;
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #667eea;
-        }
-        
-        main {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        
-        article {
-            background: white;
-            border-radius: 15px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        h1 {
-            font-size: 28px;
-            color: #333;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-        
-        .article-meta {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        h2 {
-            font-size: 22px;
-            color: #333;
-            margin: 40px 0 20px;
-            padding-left: 15px;
-            border-left: 4px solid #667eea;
-        }
-        
-        h3 {
-            font-size: 18px;
-            color: #333;
-            margin: 30px 0 15px;
-        }
-        
-        p {
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 20px;
-        }
-        
-        ul {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        
-        li {
-            line-height: 1.8;
-            color: #444;
-            margin-bottom: 12px;
-        }
-        
-        .highlight-box {
-            background: #f8f9ff;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 8px;
-        }
-        
-        .highlight-box h3 {
-            margin-top: 0;
-            color: #667eea;
-        }
-        
-        .warning-box {
-            background: #fff8f0;
-            border-left: 4px solid #ff9800;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 8px;
-        }
-        
-        .warning-box h3 {
-            margin-top: 0;
-            color: #ff9800;
-        }
-        
-        .product-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 25px;
-            text-decoration: none;
-            margin: 10px 10px 10px 0;
-            transition: transform 0.3s, box-shadow 0.3s;
-            font-weight: 600;
-        }
-        
-        .product-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-        }
-        
-        .internal-link {
-            display: inline-block;
-            background: #f0f4ff;
-            color: #667eea;
-            padding: 15px 25px;
-            border-radius: 10px;
-            text-decoration: none;
-            margin: 20px 0;
-            transition: background 0.3s;
-            border: 2px solid #667eea;
-            font-weight: 600;
-        }
-        
-        .internal-link:hover {
-            background: #667eea;
-            color: white;
-        }
-        
-        .size-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background: white;
-        }
-        
-        .size-table th,
-        .size-table td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        
-        .size-table th {
-            background: #667eea;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .size-table tr:nth-child(even) {
-            background: #f8f9ff;
-        }
-        
-        footer {
-            background: white;
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: 60px;
-        }
-        
-        footer p {
-            color: #666;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-        
-        footer a {
-            color: #667eea;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        
-        @media (max-width: 768px) {
-            article {
-                padding: 25px;
-            }
-            
-            h1 {
-                font-size: 24px;
-            }
-            
-            h2 {
-                font-size: 20px;
-            }
-            
-            .nav-links {
-                gap: 15px;
-            }
-            
-            .nav-links a {
-                font-size: 13px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 20px; font-weight: 700; color: #667eea; text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; list-style: none; }
+        .nav-links a { text-decoration: none; color: #555; font-size: 14px; }
+        .nav-links a:hover { color: #667eea; }
+        main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        article { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        .article-meta { color: #999; font-size: 13px; margin-bottom: 20px; }
+        h1 { font-size: 26px; color: #333; margin-bottom: 10px; line-height: 1.4; }
+        h2 { font-size: 22px; color: #667eea; margin: 40px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #667eea; }
+        h3 { font-size: 17px; color: #444; margin: 22px 0 8px; }
+        p { color: #555; line-height: 1.8; margin-bottom: 15px; }
+        ul, ol { color: #555; line-height: 1.8; padding-left: 24px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .breadcrumb { font-size: 13px; color: #999; margin-bottom: 20px; }
+        .breadcrumb a { color: #667eea; text-decoration: none; }
+        .sign-box { background: #f8f9ff; border: 2px solid #e8eaf6; border-radius: 12px; padding: 22px 24px; margin: 20px 0; }
+        .sign-box h3 { color: #667eea; margin-top: 0; }
+        .tip-box { background: #e8f5e9; border-left: 4px solid #4caf50; border-radius: 8px; padding: 18px 22px; margin: 20px 0; }
+        .tip-box p { margin: 0; color: #1b5e20; font-weight: 500; }
+        .warning-box { background: #fff3cd; border-left: 4px solid #ffc107; border-radius: 8px; padding: 18px 22px; margin: 20px 0; }
+        .warning-box p { margin: 0; color: #664d03; font-weight: 500; }
+        .size-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+        .size-table th { background: #667eea; color: white; padding: 10px 12px; text-align: center; }
+        .size-table td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: center; color: #555; }
+        .size-table tr:nth-child(even) td { background: #f8f9ff; }
+        .size-table td:first-child { font-weight: 600; text-align: left; color: #333; }
+        .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; padding: 30px; text-align: center; margin: 40px 0; }
+        .cta-box p { color: white; margin-bottom: 15px; font-size: 16px; }
+        .cta-button { display: inline-block; background: white; color: #667eea; font-weight: 700; padding: 14px 32px; border-radius: 50px; text-decoration: none; font-size: 16px; }
+        .product-link-amazon { display: block; background: #ff9900; color: #111; text-decoration: none; padding: 12px 20px; border-radius: 8px; margin: 10px 0; text-align: center; font-weight: 600; }
+        .product-link-amazon:hover { background: #e68900; }
+        .rakuten-links { background: #fff5f5; border: 2px solid #ff6b6b; border-radius: 12px; padding: 25px; margin: 30px 0; }
+        .rakuten-links h3 { color: #bf0000; margin-top: 0; }
+        .product-link { display: block; background: #bf0000; color: white; text-decoration: none; padding: 12px 20px; border-radius: 8px; margin: 10px 0; text-align: center; font-weight: 600; }
+        .product-link:hover { background: #990000; }
+        footer { text-align: center; padding: 30px 20px; color: rgba(255,255,255,0.8); font-size: 14px; }
+        footer a { color: rgba(255,255,255,0.8); text-decoration: none; margin: 0 10px; }
+        @media (max-width: 600px) { article { padding: 24px 16px; } h1 { font-size: 20px; } h2 { font-size: 18px; } }
     </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">👶 おむつガイド</a>
-            <ul class="nav-links">
-                <li><a href="index.html">診断ツール</a></li>
-                <li><a href="articles.html">記事一覧</a></li>
-                <li><a href="privacy.html">プライバシー</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <a href="index.html" class="logo">🍼 おむつガイド</a>
+        <ul class="nav-links">
+            <li><a href="index.html">サイズ診断</a></li>
+            <li><a href="articles.html">記事一覧</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <article>
+        <div class="breadcrumb">
+            <a href="index.html">ホーム</a> &gt; <a href="articles.html">記事一覧</a> &gt; おむつのサイズアップのタイミング・サイン
+        </div>
+        <div class="article-meta">2026年3月21日</div>
+        <h1>おむつのサイズアップのタイミング・サイン｜見逃しやすいポイントを解説</h1>
+        <p>「最近おむつが漏れやすくなった」「テープ跡が残っている」…それ、サイズアップのサインかもしれません。この記事では、サイズアップが必要なサインと正しいタイミング、次のサイズの選び方を解説します。</p>
 
-    <main>
-        <article>
-            <h1>おむつのサイズアップのタイミング・サイン</h1>
-            <div class="article-meta">
-                公開日: 2025年2月24日 | カテゴリ: おむつの選び方
-            </div>
+        <h2>サイズアップが必要なサイン</h2>
 
-            <p>おむつのサイズが合わなくなると、漏れやかぶれの原因になります。でも、「いつサイズアップすればいいの？」と悩むママ・パパも多いのではないでしょうか。</p>
-            
-            <p>この記事では、サイズアップが必要なサインと、体に合っているかチェックするポイントを詳しく解説します。</p>
+        <div class="sign-box">
+            <h3>① テープ跡・ウエストの締め跡が残る</h3>
+            <p>おむつを外したときに赤ちゃんのお腹や腰に跡が残っている場合、サイズが小さくなっているサインです。肌への負担も大きいので早めにサイズアップを検討しましょう。</p>
+        </div>
 
-            <h2>サイズアップが必要な5つのサイン</h2>
-            
-            <p>以下のサインが1つでも当てはまったら、サイズアップを検討しましょう。</p>
+        <div class="sign-box">
+            <h3>② 漏れが増えた</h3>
+            <p>以前より漏れが多くなったと感じたら、おむつが体に合っていない可能性があります。サイズが小さいとギャザーが正しくフィットせず、横漏れ・背中漏れが起きやすくなります。</p>
+        </div>
 
-            <h3>1. テープ跡が肌に残る</h3>
-            <p>おむつを外した後、お腹や太ももに赤い跡が残っていませんか？跡が30分以上消えない場合は、サイズが小さすぎるサインです。締め付けが強いと、血行不良やかぶれの原因になります。</p>
+        <div class="sign-box">
+            <h3>③ テープが止めにくくなった</h3>
+            <p>テープ式おむつで、テープを止める位置が外側にずれてきた場合はサイズアップのタイミングです。テープがおむつの端ギリギリになっていたら要注意。</p>
+        </div>
 
-            <h3>2. おしっこ・うんち漏れが増えた</h3>
-            <p>今まで漏れなかったのに、最近漏れることが増えたら要注意。特に太ももやお腹周りから漏れる場合は、ギャザーが体にフィットしていない可能性があります。</p>
+        <div class="sign-box">
+            <h3>④ 体重が上限に近づいた</h3>
+            <p>各サイズには対応体重の目安があります。現在の体重が上限に近づいてきたら、次のサイズを試してみましょう。</p>
+        </div>
 
-            <h3>3. 太ももやお腹がきつい</h3>
-            <p>おむつを履かせるときに、太ももやお腹周りがきつくて入りにくい場合は、サイズアップのタイミング。無理に履かせると、赤ちゃんが不快に感じます。</p>
+        <div class="tip-box">
+            <p>💡 サイズアップは「体重」だけでなく「体型・フィット感」で判断するのが大切。同じ体重でも体型によって合うサイズが違います。</p>
+        </div>
 
-            <h3>4. ギャザーが内側に入り込む</h3>
-            <p>太もものギャザーが内側に入り込んでいる場合、サイズが小さすぎます。ギャザーは外側に立っているのが正しい状態です。</p>
+        <h2>おむつサイズの目安</h2>
+        <table class="size-table">
+            <tr><th>サイズ</th><th>体重の目安</th><th>特徴</th></tr>
+            <tr><td>新生児（NB）</td><td>〜5kg</td><td>使用期間が短い。買いすぎ注意</td></tr>
+            <tr><td>S</td><td>4〜8kg</td><td>新生児期を過ぎたら移行</td></tr>
+            <tr><td>M</td><td>6〜11kg</td><td>最も使用期間が長い</td></tr>
+            <tr><td>L</td><td>9〜14kg</td><td>動き回るようになる時期</td></tr>
+            <tr><td>XL・ビッグ</td><td>12〜17kg</td><td>トイレトレーニング前まで</td></tr>
+        </table>
 
-            <h3>5. おしっこの吸収量が足りない</h3>
-            <p>おむつがパンパンになるのが早くなったら、吸収量が足りていないサイン。サイズアップすると吸収量も増えるので、漏れ防止になります。</p>
+        <div class="warning-box">
+            <p>⚠️ サイズアップ直前に大量購入するのはNG！現在のサイズが合わなくなっても困らないよう、残り少なくなってから次のサイズを購入しましょう。</p>
+        </div>
 
-            <h2>体に合っているかチェックポイント</h2>
-            
-            <p>おむつを履かせた後、以下のポイントをチェックしましょう。</p>
+        <h2>サイズアップ後は1パックで試してみよう</h2>
+        <p>サイズアップのタイミングは赤ちゃんによって異なります。また、同じサイズでもメーカーによってフィット感が違うことも。まずは小さいパックで試して、肌に合うか・フィットするかを確認してから大容量を購入するのがおすすめです。</p>
 
-            <h3>✅ ギャザーの位置</h3>
-            <p>太もものギャザーが外側に立っていて、足の付け根にフィットしているか確認しましょう。ギャザーが内側に入り込んでいると漏れの原因になります。</p>
+        <h2>次のサイズをAmazonで探す</h2>
+        <p style="color:#555; font-size:14px; margin-bottom:5px;">サイズアップ後のおむつをまとめ買いする前に、まず1パック試してみましょう。</p>
+        <a href="https://amzn.to/3Rsqz4k" class="product-link-amazon" target="_blank" rel="nofollow noopener">パンパース おむつ（Amazonで見る）</a>
+        <a href="https://amzn.to/43n9qvs" class="product-link-amazon" target="_blank" rel="nofollow noopener">メリーズ おむつ（Amazonで見る）</a>
+        <a href="https://amzn.to/43mX2LZ" class="product-link-amazon" target="_blank" rel="nofollow noopener">ムーニー おむつ（Amazonで見る）</a>
+        <a href="https://amzn.to/4nJV0z7" class="product-link-amazon" target="_blank" rel="nofollow noopener">グーン おむつ（Amazonで見る）</a>
 
-            <h3>✅ ウエストの締め付け</h3>
-            <p>お腹周りに指が2本入るくらいの余裕があるのが理想。きつすぎても緩すぎてもNGです。</p>
+        <div class="cta-box">
+            <p>今のサイズが本当に合っているか確認しませんか？<br>体重・月齢を入力するだけで最適なサイズが分かります！</p>
+            <a href="index.html" class="cta-button">👶 おむつサイズ診断を使ってみる</a>
+        </div>
 
-            <h3>✅ 太もものゆとり</h3>
-            <p>太ももとおむつの間に指1本分の余裕があるか確認。きつすぎると跡が残り、緩すぎると漏れます。</p>
-
-            <h2>お子様に最適なサイズを診断</h2>
-            
-            <p>体重だけでなく、身長や体型も考慮した正確なサイズ診断ができます。各メーカーのサイズ表よりも、お子様の体に合ったおむつが見つかります。</p>
-
-            <div class="highlight-box">
-                <h3>👶 おむつサイズ診断ツール</h3>
-                <p>体重・身長を入力するだけで、パンパース・メリーズ・ムーニー・グーン全メーカーの最適サイズがわかります。</p>
-                <a href="index.html" class="internal-link">📊 今すぐ診断してみる</a>
-            </div>
-
-            <h2>テープ→パンツへの切り替えタイミング</h2>
-            
-            <p>サイズアップと同時に、テープ式からパンツ式への切り替えを検討する時期でもあります。</p>
-
-            <ul>
-                <li><strong>寝返りが始まった</strong> - おむつ替えの時にじっとしてくれない</li>
-                <li><strong>ハイハイ・つかまり立ちが始まった</strong> - 動きが活発になってきた</li>
-                <li><strong>テープが止めにくくなった</strong> - 嫌がって逃げるようになった</li>
-            </ul>
-
-            <p>これらのサインが出たら、パンツ式への切り替えを検討しましょう。</p>
-
-            <a href="article2.html" class="internal-link">📖 テープ式とパンツ式の違いと切り替え時期を詳しく見る</a>
-
-            <h2>サイズアップの失敗例と対策</h2>
-
-            <div class="warning-box">
-                <h3>⚠️ よくある失敗</h3>
-                <ul>
-                    <li><strong>まとめ買いしすぎた</strong> - 成長が早くてサイズアウト</li>
-                    <li><strong>大きすぎるサイズを買った</strong> - 隙間から漏れてしまう</li>
-                    <li><strong>メーカーを変えたら合わなかった</strong> - 同じサイズでも大きさが違う</li>
-                </ul>
-            </div>
-
-            <h3>対策</h3>
-            <ul>
-                <li><strong>まとめ買いは1〜2パック</strong>まで - 成長が早い時期は特に注意</li>
-                <li><strong>試供品で試す</strong> - メーカーを変える時は少量から</li>
-                <li><strong>2サイズを併用</strong> - 昼は今のサイズ、夜は大きめサイズなど</li>
-            </ul>
-
-            <h2>おすすめのおむつ（楽天で見る）</h2>
-            
-            <p>サイズアップの際、以下の人気おむつがおすすめです。</p>
-
+        <div class="rakuten-links">
+            <h3>🛒 楽天でおむつを探す</h3>
             <a href="https://hb.afl.rakuten.co.jp/ichiba/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%2591%25E3%2583%25B3%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25B9%2B%25E3%2581%258A%25E3%2582%2580%25E3%2581%25A4%2F&link_type=hybrid_url&ut=eyJwYWdlIjoic2VhcmNoIiwidHlwZSI6Imh5YnJpZF91cmwiLCJzcCI6MSwic3IiOjEsInNfaWQiOiJzcl8xIn0" class="product-link" target="_blank" rel="nofollow noopener">パンパース おむつ（楽天で見る）</a>
-            
             <a href="https://hb.afl.rakuten.co.jp/ichiba/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A1%25E3%2583%25AA%25E3%2583%25BC%25E3%2582%25BA%2B%25E3%2581%258A%25E3%2582%2580%25E3%2581%25A4%2F&link_type=hybrid_url&ut=eyJwYWdlIjoic2VhcmNoIiwidHlwZSI6Imh5YnJpZF91cmwiLCJzcCI6MSwic3IiOjEsInNfaWQiOiJzcl8xIn0" class="product-link" target="_blank" rel="nofollow noopener">メリーズ おむつ（楽天で見る）</a>
-            
             <a href="https://hb.afl.rakuten.co.jp/ichiba/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2583%25A0%25E3%2583%25BC%25E3%2583%258B%25E3%2583%25BC%2B%25E3%2581%258A%25E3%2582%2580%25E3%2581%25A4%2F&link_type=hybrid_url&ut=eyJwYWdlIjoic2VhcmNoIiwidHlwZSI6Imh5YnJpZF91cmwiLCJzcCI6MSwic3IiOjEsInNfaWQiOiJzcl8xIn0" class="product-link" target="_blank" rel="nofollow noopener">ムーニー おむつ（楽天で見る）</a>
+            <a href="https://hb.afl.rakuten.co.jp/ichiba/51454309.0bfe9998.5145430a.91b8b02e/?pc=https%3A%2F%2Fsearch.rakuten.co.jp%2Fsearch%2Fmall%2F%25E3%2582%25B0%25E3%2583%25BC%25E3%2583%25B3%2B%25E3%2581%258A%25E3%2582%2580%25E3%2581%25A4%2F&link_type=hybrid_url&ut=eyJwYWdlIjoic2VhcmNoIiwidHlwZSI6Imh5YnJpZF91cmwiLCJzcCI6MSwic3IiOjEsInNfaWQiOiJzcl8xIn0" class="product-link" target="_blank" rel="nofollow noopener">グーン おむつ（楽天で見る）</a>
+        </div>
 
-            <h2>まとめ</h2>
-            
-            <p>おむつのサイズアップは、赤ちゃんの成長に合わせて適切なタイミングで行うことが大切です。</p>
-
-            <ul>
-                <li>テープ跡が残る、漏れが増えたらサイズアップのサイン</li>
-                <li>ギャザーの位置、ウエスト・太もものゆとりをチェック</li>
-                <li>まとめ買いしすぎない、試供品で試す</li>
-                <li>動きが活発になったらパンツ式への切り替えも検討</li>
-            </ul>
-
-            <p>赤ちゃんの体に合ったおむつを選んで、快適なおむつ生活を送りましょう！</p>
-        </article>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 おむつガイド診断ナビ</p>
-        <a href="privacy.html">プライバシーポリシー</a>
-        <a href="contact.html">お問い合わせ</a>
-    </footer>
+        <h2>まとめ</h2>
+        <ul>
+            <li>テープ跡・漏れ増加・テープの位置ずれがサイズアップのサイン</li>
+            <li>体重だけでなくフィット感で判断するのが大切</li>
+            <li>サイズアップ後はまず1パックで試してから大量購入を</li>
+            <li>サイズが合っているか不安なら診断ツールを活用しよう</li>
+        </ul>
+        <p>サイズが合ったおむつを使うことで漏れや肌荒れを防ぎ、赤ちゃんも快適に過ごせます。迷ったら診断ツールも活用してみてください。</p>
+    </article>
+</main>
+<footer>
+    <p>&copy; 2026 おむつガイド</p>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="contact.html">お問い合わせ</a>
+</footer>
 </body>
 </html>
